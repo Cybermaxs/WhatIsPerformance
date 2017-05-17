@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>What is performance ?</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>What is Performance ???</h1>
+				Maxime Lemaitre - 19/05/2017
+			</section>
+			<section>
+				<section>
+					<h2>Do we all have the same vision of Performance ?</h2>
+				</section>
+				<section>
+					<h3>End user</h3>
+					<p><i>...the time to open your application or to visualize your website...</i></p>
+					<img src='img/loading.gif' />
+				</section>
+				<section>
+					<h3>Web Developper</h3>
+					<p><i>...the number of requests, the bundle size, the page load, ... aka Web Performance Optimization (WPO)...</i></p>
+					<img src='img/waterfall.png' />
+				</section>
+				<section>
+					<h3>Back-end Developper</h3>
+					<p><i>...the time to process requests, the number of requests/sec, scalability, ...</i></p>
+					<img src='img/server.png' />
+				</section>
+				<section>
+					<h3>Sysadmins, Ops</h3>
+					<p><i>...hardware resources (CPU, Memory, IOs) ...</i></p>
+					<img src='img/hardware.png' />
+				</section>
+				<section>
+					<h3>Marketing Guy</h3>
+					<p><i>...the time of business transaction, the number of business transactions aka Througput...</i></p>
+					<img src='img/paypal.png' />
+				</section>
+				<section>
+					<h3>Manager(s)</h3>
+					<p><i>... cloud costs, uptime, competitors...</i></p>
+					<img src='img/cloudcosts.jpg' />
+				</section>
+				<section>
+					<ul>
+						<li>Who is right ?</li>
+						<li>Do we have a problem ?</li>
+						<li>Does performance matter ?</li>
+						<li>...</li>
+						<li>What is performance ?</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>a random definition</h3>
+					<p>The word <strong>performance</strong> in computer performance means the same thing that performance means in other contexts,
+						that is, it means ...</p>
+					<h4>How well is the computer doing the work it is supposed to do?</h4>
+				</section>
+				<section>
+					<h3>How a software is supposed to work ?</h3>
+					<ul>
+						<li>Short <strong>response time</strong> for a given action</li>
+						<li>High <strong>throughput</strong> (rate of processing business transaction)</li>
+						<li>Low utilization of <strong>computing resources</strong>(CPU, Memory, IO, ...)</li>
+						<li><strong>High availability</strong> of the application</li>
+						<li>Fast (or highly compact) <strong>data</strong> compression and decompression</li>
+						<li>Low <strong>latency</strong></li>
+						<li>Low <strong>Environmental</strong> impact</li>
+					</ul>
+					<p class="fragment grow highlight-red">In all situations !</p>
+				</section>
+				<section data-background-image="img/developper.jpg"></section>
+			</section>
+			<section>
+				<section>
+					<h2>Does performance matters ?</h2>
+					What happens if the software is not working well...
+				</section>
+				<section>
+					<blockquote class="fragment fade-out" data-fragment-index="1">When your website or application is broken, nobody will use it ;)</blockquote>
+					<blockquote class="fragment fade-up" data-fragment-index="1">The slower your website or application loads and displays, the less people will use it</blockquote>
+				</section>
+				<section>
+					<h3>Expiremental results</h3>
+					<img src='img/rates.jpg' />
+				</section>
+				<section>
+					<h3>Some quantitatives results from the industry</h3>
+					<ul>
+						<li><strong>Google</strong> – A 500 millisecond delay caused a 20% drop in traffic</li>
+						<li><strong>Amazon</strong> - Every 100ms of latency cost them 1% in sales.</li>
+						<li><strong>Shopzilla</strong> – Speeding up their site by 5 seconds increased the conversion rate 7-12%</li>
+						<li><strong>Mozilla</strong> – Shaving 2.2 seconds off their landing pages increased download conversions by 15.4%</li>
+						<li><strong>Netflix</strong> – Adopting gzip compression, resulted in a 13-25% speedup and cut their outbound network traffic
+							by 50%.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Is it only for the end-user ?</h3>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Do we have a performance issue ?</h3>
+				</section>
+				<section data-background-image="img/houston.gif"></section>
+				<section>
+					<h3>Most of the time, performance issue are not visible...</h3>
+					<ul>
+						<li>Website/App is up</li>
+						<li>No errors</li>
+						<li>No alerts</li>
+						<li>No remarks from your manager(s)</li>
+						<li>No complaints from users</li>
+					</ul>
+					<p>We can suppose the system is working well :(</p>
+					<p class="fragment">...But in fact we just don't <strong>know</strong></p>
+				</section>
+				<section>
+					<h3>Working on performance <br />=<br />Showing what's not visible</h3>
+				</section>
+				<section>
+					<h3>How many 3's ?'</h3>
+					<img src='img/dataviz1.png' />
+					<img src='img/dataviz2.png' class="fragment" />
+				</section>
+				<section>
+					<h3>Anscombe's quartet</h3>
+					<img src='img/anscombe.png' height="400" />
+					<p>four datasets that have nearly identical simple statistical properties but very different when graphed</p>
+				</section>
+				<section>
+					<h1>Averages are bad !!!</h1>
+					<p>We don't want something to be fast <i>on average</i>, we want it to be fast for most of the users</p>
+					<blockquote>Most people have more than the average number of legs. </blockquote>
+					<p>Hans Rosling</p>
+				</section>
+				<section>
+					<h3>Why ?</h3>
+					<img src='img/averages.png' />
+					<p>Page loads in more than the average for 30% of the users, even more than 21 secs for 5%</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>In 2017, Why do we still have performance troubles ?</h2>
+				</section>
+				<section>
+					<h3>Misunderstood quote</h3>
+					<blockquote><span class="fragment fade-in" data-fragment-index="1">We should forget about small efficiencies, say about 97% of the time: </span><strong>premature optimization is the root of all evil.</strong>
+						<span class="fragment fade-in" data-fragment-index="1"> Yet we should not pass up our opportunities in that critical 3%</span>
+					</blockquote>
+					<p>Donald Knuth</p>
+				</section>
+				<section>
+					<h3>Non-scalable design</h3>
+					<img src='img/scalability.png' width="700" />
+				</section>
+				<section>
+					<h3>Lack of -production- monitoring</h3>
+					<img src='img/deming.png' />
+				</section>
+				<section>
+					<h3>Lack of ownership</h3>
+				</section>
+				<section>
+					<h3>No goals, No objectives, No SLA</h3>
+				</section>
+				<section>
+					<h3>dependencies</h3>
+					<ul>
+						<li>Third-Parties</li>
+						<li>External librairies</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Just gave up</h3>
+					<blockquote>Never give up your performance accidentally </blockquote>
+					<p>Rico Mariani</p>
+				</section>
+				<section>
+					<h3>A Natural evolution of a system</h3>
+					<img src='img/regressionovertime.png' style="float:right" width="450" />
+					<p>
+						<ul style="display: block">In each release, we can :
+							<li>Add new features</li>
+							<li>Update existing features</li>
+							<li>Remove dead code</li>
+							<li>Do refactoring</li>
+							<li>Integrate new devs & juniors</li>
+							<li>Update technical components & dependencies</li>
+							<li>Create bugs</li>
+							<li>...</li>
+						</ul>
+						Performance regression is
+						<h4 style="display: inline">expected</h4> over time</h4>
+					</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Testing performance</h2>
+				</section>
+				<section>
+					<h2>Where ?</h2>
+					<p>You won't see <strong>ANY</strong> performance issues during unit tests</p>
+					<p>You won't see <strong>ALL</strong> performance issues in Development</p>
+				</section>
+				<section>
+					<p>You can’t optimize everything, you will never have the time to work only on performance</p>
+					<h3>Measure !</h3>
+					<p>Don't try to guess, never automatically apply tips, best practices... optimizing performance is meaningless if you do
+						not have effective tools for measuring it.
+						<ul>
+							<li>Identify bottlenecks</li>
+							<li>Verify the optimisation works</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3>The art of Micro-benchmarking</h3>
+					<p>Benchmarking is hard, it’s very easy to end up <strong>not measuring, what you think you are measuring</strong></p>
+					<p><small><i>common pitfalls  : Cold-start, Dynamic selection of benchmarks, Loop optimizations, Dead-code elimination, Constant foldings,
+						Non-throughput measures, Synchronize iterations, Multi-threaded sharing, Multi-threaded setup/teardown, False-sharing,
+						Asymmetric benchmarks, Inlining</i></small></p>
+					<h4>Do not implement your own test rig</h4>
+				</section>
+				<section>
+					<h3>Load testing</h3>
+					<div style="width:50%; float:left">
+						<img src='img/sunny.png' height="300" />
+						<p>It's great if your site performs well for a single user..</p>
+					</div>
+					<div style="width:50%; float:right">
+						<img src='img/storm.png' height="300" />
+						<p>But how will it do when a storm of users hits?</p>
+					</div>
+				</section>
+				<section>
+					<h3>Every software has characteristics</h3>
+					<div style="width:50%; float:left">
+						<img src='img/throughput.png' height="200" />
+						<p>The throughput is not linear : it depends on the load.
+						</p>
+					</div>
+					<div style="width:50%; float:right">
+						<img src='img/responsetime.png' height="200" />
+						<p>
+							The response time increases proportionally to the user load.
+						</p>
+					</div>
+				</section>
+				<section>
+					<h3>To Summarize</h3>
+					<ol>
+						<li>Identify bottlenecks</li>
+						<li>Verify the optimisation works</li>
+						<li>Check your SLA/Goal/Performance budget</li>
+						<li>Goto 1.</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Building a performance-minded team</h3>
+					<ul>
+						<li>Understand your critical path</li>
+						<li>Understand your prod activity & usage</li>
+						<li>Do effective testing</li>
+						<li>Setup Perf Infrastructure & Automation</li>
+						<li>Believe & Trust only numbers</li>
+						<li>Do regular code reviews</li>
+						<li>Educate your team, company</li>
+						<li>Celebrate your success !</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Bonus : Golden rules</h3>
+					<h4>Never do anything more than once.</h4>
+					<p>Cache everything that is likely to be used more than once</p>
+
+					<h4>Don’t do anything you don’t need to</h4>
+					<p>Don't return large quantities of data when only a small set is needed</p>
+
+					<h4>Get everything in one go</h4>
+					<p>Don’t use lots of fine grained web service or database calls when one chunky call can be used instead.</p>
+				</section>
+				<section>
+					<h4>Your homework</h4>
+					<ul>
+						<li>Can you give me the main bottleneck of your system ?</li>
+						<li>Do you have performance/load tests ?</li>
+						<li>Can you show me your performance dashboards ?</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Performance is a feature</h2>
+			</section>
+			<section>
+				<h1>Questions ?</h1>
+			</section>
+		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
