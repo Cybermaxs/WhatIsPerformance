@@ -75,7 +75,7 @@
 					<h3>a random definition</h3>
 					<p>The word <strong>performance</strong> in computer performance means the same thing that performance means in other contexts,
 						that is, it means ...</p>
-					<h4>How well is the computer doing the work it is supposed to do?</h4>
+					<h4>How well is the software doing the work it is supposed to do?</h4>
 				</section>
 				<section>
 					<h3>How a software is supposed to work ?</h3>
@@ -90,13 +90,13 @@
 					</ul>
 					<p class="fragment grow highlight-red">In all situations !</p>
 				</section>
-				<section data-background-image="img/developper.jpg"></section>
 			</section>
 			<section>
 				<section>
 					<h2>Does performance matters ?</h2>
 					What happens if the software is not working well...
 				</section>
+				<section data-background-image="img/developper.jpg"></section>
 				<section>
 					<blockquote class="fragment fade-out" data-fragment-index="1">When your website or application is broken, nobody will use it ;)</blockquote>
 					<blockquote class="fragment fade-up" data-fragment-index="1">The slower your website or application loads and displays, the less people will use it</blockquote>
@@ -168,61 +168,6 @@
 			</section>
 			<section>
 				<section>
-					<h2>In 2017, Why do we still have performance troubles ?</h2>
-				</section>
-				<section>
-					<h3>Non-scalable design</h3>
-					<img src='img/scalability.png' width="700" />
-				</section>
-				<section>
-					<h3>Lack of -production- monitoring</h3>
-					<img src='img/deming.png' />
-				</section>
-				<section>
-					<h3>Misunderstood quote</h3>
-					<blockquote><span class="fragment fade-in" data-fragment-index="1">We should forget about small efficiencies, say about 97% of the time: </span><strong>premature optimization is the root of all evil.</strong>
-						<span class="fragment fade-in" data-fragment-index="1"> Yet we should not pass up our opportunities in that critical 3%</span>
-					</blockquote>
-					<p>Donald Knuth</p>
-				</section>
-				<section>
-					<h3>Lack of ownership</h3>
-				</section>
-				<section>
-					<h3>Big Data</h3>
-				</section>
-				<section>
-					<h3>No performance tests</h3>
-				</section>
-				<section>
-					<h3>Too late</h3>
-				</section>
-				<section>
-					<h3>No goals, No objectives, No SLA</h3>
-					<p><i>Tip : use <s>averges</s> percentiles</i></p>
-				</section>
-				<section>
-					<h3>dependencies</h3>
-					<ul>
-						<li>Third-Parties</li>
-						<li>External librairies</li>
-					</ul>
-				</section>
-				<section>
-					<h3>A Natural evolution of a system</h3>
-					<img src='img/regressionovertime.png' width="450" />
-					<p>As the software evolves, Performance regression is
-						<h4 style="display: inline">expected</h4> over time</h4>
-					</p>
-				</section>
-				<section>
-					<h3>Just gave up</h3>
-					<blockquote>Never give up your performance accidentally </blockquote>
-					<p>Rico Mariani</p>
-				</section>
-			</section>
-			<section>
-				<section>
 					<h2>Testing performance</h2>
 				</section>
 				<section>
@@ -274,14 +219,63 @@
 						</p>
 					</div>
 				</section>
+			</section>
+			<section>
 				<section>
-					<h3>To Summarize</h3>
-					<ol>
-						<li>Identify bottlenecks</li>
-						<li>Verify the optimisation works</li>
-						<li>Check your SLA/Goal/Performance budget</li>
-						<li>Goto 1.</li>
-					</ol>
+					<h2>In 2017, Why do we still have performance troubles ?</h2>
+				</section>
+				<section>
+					<h3>Lack of -production- monitoring</h3>
+					<img src='img/deming.png' />
+				</section>
+				<section>
+					<h3>Misunderstood quote</h3>
+					<blockquote><span class="fragment fade-in" data-fragment-index="1">We should forget about small efficiencies, say about 97% of the time: </span><strong>premature optimization is the root of all evil.</strong>
+						<span class="fragment fade-in" data-fragment-index="1"> Yet we should not pass up our opportunities in that critical 3%</span>
+					</blockquote>
+					<p>Donald Knuth</p>
+				</section>
+				<section>
+					<h3>dependencies</h3>
+					<ul>
+						<li>Third-Parties</li>
+						<li>External librairies</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Non-scalable design</h3>
+					<img src='img/scalability.png' width="700" />
+				</section>
+				<section>
+					<h3>Not mastering the platform/tools</h3>
+				</section>
+				<section>
+					<h3>Lack of ownership</h3>
+				</section>
+				<section>
+					<h3>Big Data</h3>
+				</section>
+				<section>
+					<h3>No performance tests or too late</h3>
+				</section>
+				<section>
+					<h3>No exploration</h3>
+				</section>
+				<section>
+					<h3>No goals, No objectives, No SLA</h3>
+					<p><i>Tip : use <s>averges</s> percentiles</i></p>
+				</section>
+				<section>
+					<h3>A Natural evolution of a system</h3>
+					<img src='img/regressionovertime.png' width="450" />
+					<p>As the software evolves, Performance regression is
+						<h4 style="display: inline">expected</h4> over time</h4>
+					</p>
+				</section>
+				<section>
+					<h3>Just gave up</h3>
+					<blockquote>Never give up your performance accidentally </blockquote>
+					<p>Rico Mariani</p>
 				</section>
 			</section>
 			<section>
@@ -297,17 +291,6 @@
 						<li>Educate your team, company</li>
 						<li>Celebrate your success !</li>
 					</ul>
-				</section>
-				<section>
-					<h3>Bonus : Golden rules</h3>
-					<h4>Never do anything more than once.</h4>
-					<p>Cache everything that is likely to be used more than once</p>
-
-					<h4>Don’t do anything you don’t need to</h4>
-					<p>Don't return large quantities of data when only a small set is needed</p>
-
-					<h4>Get everything in one go</h4>
-					<p>Don’t use lots of fine grained web service or database calls when one chunky call can be used instead.</p>
 				</section>
 				<section>
 					<h4>Your homework</h4>
