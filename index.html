@@ -167,13 +167,6 @@
 					<h2>In 2017, Why do we still have performance troubles ?</h2>
 				</section>
 				<section>
-					<h3>Misunderstood quote</h3>
-					<blockquote><span class="fragment fade-in" data-fragment-index="1">We should forget about small efficiencies, say about 97% of the time: </span><strong>premature optimization is the root of all evil.</strong>
-						<span class="fragment fade-in" data-fragment-index="1"> Yet we should not pass up our opportunities in that critical 3%</span>
-					</blockquote>
-					<p>Donald Knuth</p>
-				</section>
-				<section>
 					<h3>Non-scalable design</h3>
 					<img src='img/scalability.png' width="700" />
 				</section>
@@ -182,10 +175,27 @@
 					<img src='img/deming.png' />
 				</section>
 				<section>
+					<h3>Misunderstood quote</h3>
+					<blockquote><span class="fragment fade-in" data-fragment-index="1">We should forget about small efficiencies, say about 97% of the time: </span><strong>premature optimization is the root of all evil.</strong>
+						<span class="fragment fade-in" data-fragment-index="1"> Yet we should not pass up our opportunities in that critical 3%</span>
+					</blockquote>
+					<p>Donald Knuth</p>
+				</section>
+				<section>
 					<h3>Lack of ownership</h3>
 				</section>
 				<section>
+					<h3>Big Data</h3>
+				</section>
+				<section>
+					<h3>No performance tests</h3>
+				</section>
+				<section>
+					<h3>Too late</h3>
+				</section>
+				<section>
 					<h3>No goals, No objectives, No SLA</h3>
+					<p><i>Tip : use <s>averges</s> percentiles</i></p>
 				</section>
 				<section>
 					<h3>dependencies</h3>
@@ -195,27 +205,16 @@
 					</ul>
 				</section>
 				<section>
+					<h3>A Natural evolution of a system</h3>
+					<img src='img/regressionovertime.png' width="450" />
+					<p>As the software evolves, Performance regression is
+						<h4 style="display: inline">expected</h4> over time</h4>
+					</p>
+				</section>
+				<section>
 					<h3>Just gave up</h3>
 					<blockquote>Never give up your performance accidentally </blockquote>
 					<p>Rico Mariani</p>
-				</section>
-				<section>
-					<h3>A Natural evolution of a system</h3>
-					<img src='img/regressionovertime.png' style="float:right" width="450" />
-					<p>
-						<ul style="display: block">In each release, we can :
-							<li>Add new features</li>
-							<li>Update existing features</li>
-							<li>Remove dead code</li>
-							<li>Do refactoring</li>
-							<li>Integrate new devs & juniors</li>
-							<li>Update technical components & dependencies</li>
-							<li>Create bugs</li>
-							<li>...</li>
-						</ul>
-						Performance regression is
-						<h4 style="display: inline">expected</h4> over time</h4>
-					</p>
 				</section>
 			</section>
 			<section>
