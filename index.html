@@ -24,7 +24,7 @@
 		<div class="slides">
 			<section>
 				<h1>What is Performance ???</h1>
-				Maxime Lemaitre - 19/05/2017
+				Maxime Lemaitre - @__Cybermaxs__
 			</section>
 			<section>
 				<section>
@@ -71,7 +71,7 @@
 			</section>
 			<section>
 				<section>
-					<h3>a random definition</h3>
+					<h3>a common definition</h3>
 					<p>The word <strong>performance</strong> in computer performance means the same thing that performance means in other contexts,
 						that is, it means ...</p>
 					<h4>How well is the software doing the work it is supposed to do?</h4>
@@ -87,7 +87,7 @@
 						<li>Low <strong>latency</strong></li>
 						<li>Low <strong>Environmental</strong> impact</li>
 					</ul>
-					<p class="fragment grow highlight-red">In all situations !</p>
+					<p><i>(... in all situations ...)</i></p>
 				</section>
 			</section>
 			<section>
@@ -95,7 +95,6 @@
 					<h2>Does performance matters ?</h2>
 					What happens if the software is not working well...
 				</section>
-				<section data-background-image="img/developper.jpg"></section>
 				<section>
 					<blockquote class="fragment fade-out" data-fragment-index="1">When your website or application is broken, nobody will use it ;)</blockquote>
 					<blockquote class="fragment fade-up" data-fragment-index="1">The slower your website or application loads and displays, the less people will use it</blockquote>
@@ -134,7 +133,7 @@
 						<li>No complaints from users</li>
 					</ul>
 					<p>We can suppose the system is working well :(</p>
-					<p class="fragment">...But in fact we just don't <strong>know</strong></p>
+					<p>...But in fact we just don't <strong>know</strong></p>
 				</section>
 				<section>
 					<h3>Working on performance <br />=<br />Showing what's not visible</h3>
@@ -152,22 +151,18 @@
 				<section>
 					<h1>Averages are bad !!!</h1>
 					<p>We don't want something to be fast <i>on average</i>, we want it to be fast for most of the users</p>
-					<blockquote>Most people have more than the average number of legs. </blockquote>
-					<p>Hans Rosling</p>
+					<blockquote>Most people have more than the average number of legs - Hans Rosling</blockquote>
+					<h3>Use Percentiles !</h3>
 				</section>
 				<section>
 					<h3>Why ?</h3>
 					<img src='img/averages.png' />
 					<p>Page loads in more than the average for 30% of the users, even more than 21 secs for 5%</p>
 				</section>
-				<section>
-					<h3>Percentiles</h3>
-					<img src='img/percentiles.png' height="400"/>
-				</section>
 			</section>
 			<section>
 				<section>
-					<h2>Testing performance</h2>
+					<h2>Working on performance</h2>
 				</section>
 				<section>
 					<h2>Where ?</h2>
@@ -177,13 +172,13 @@
 				<section>
 					<p>You can’t optimize everything, you will never have the time to work only on performance</p>
 					<h3>Measure !</h3>
-					<p>Don't try to guess, never automatically apply tips, best practices... optimizing performance is meaningless if you do
-						not have effective tools for measuring it.
-						<ul>
-							<li>Identify bottlenecks</li>
-							<li>Verify the optimisation works</li>
-						</ul>
-					</p>
+					<h2>Measure !</h2>
+					<h1>Measure !</h1>
+					<p><small>Don't try to guess, never automatically apply tips, best practices... optimizing performance is meaningless if you do not have effective tools for measuring it.
+					</small></p>
+				</section>
+				<section>
+					<h2>Is this performance issue a real problem for you ?</h2>
 				</section>
 				<section>
 					<h3>The art of Micro-benchmarking</h3>
@@ -191,7 +186,7 @@
 					<p><small><i>common pitfalls  : Cold-start, Dynamic selection of benchmarks, Loop optimizations, Dead-code elimination, Constant foldings,
 						Non-throughput measures, Synchronize iterations, Multi-threaded sharing, Multi-threaded setup/teardown, False-sharing,
 						Asymmetric benchmarks, Inlining</i></small></p>
-					<h4>Do not implement your own test rig</h4>
+					<h3>Do not implement your own test rig</h3>
 				</section>
 				<section>
 					<h3>Load testing</h3>
@@ -217,6 +212,9 @@
 							The response time increases proportionally to the user load.
 						</p>
 					</div>
+				</section>
+				<section>
+					<h2>Use the right tools with the appropriate methodoly</h2>
 				</section>
 			</section>
 			<section>
@@ -252,7 +250,8 @@
 					<h3>Lack of ownership</h3>
 				</section>
 				<section>
-					<h3>Big Data</h3>
+					<h3>(Unexpected) Big Data</h3>
+					<h3>(Unexpected) success</h3>
 				</section>
 				<section>
 					<h3>No performance tests</h3>
@@ -285,7 +284,8 @@
 						<li>Understand your prod activity & usage</li>
 						<li>Do effective testing</li>
 						<li>Setup Perf Infrastructure & Automation</li>
-						<li>Believe & Trust only numbers</li>
+						<li>Become metrics-oriented</li>
+						<li>Define SLA on what matters for you</li>
 						<li>Do regular code reviews</li>
 						<li>Educate your team, company</li>
 						<li>Celebrate your success !</li>
@@ -301,10 +301,7 @@
 				</section>
 			</section>
 			<section>
-				<h2>Performance is a feature</h2>
-			</section>
-			<section>
-				<h1>Questions ?</h1>
+				<h1>Thank you</h1>
 			</section>
 		</div>
 	</div>
